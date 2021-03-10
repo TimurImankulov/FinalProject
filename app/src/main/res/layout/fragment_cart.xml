@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Add address"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp15"
+        app:layout_constraintBottom_toBottomOf="@id/ivCart"
+        app:layout_constraintEnd_toStartOf="@id/ivCart"
+        app:layout_constraintTop_toTopOf="@id/ivCart" />
+
+    <ImageView
+        android:id="@+id/ivCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:src="@drawable/ic_btn_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp40"
+        android:fontFamily="@font/mark_pro_bold"
+        android:text="My Cart"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/bg_round_frame_cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/firstGuideLine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp4"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="Total"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp35"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="6,000 us"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+
+        <TextView
+            android:id="@+id/tvDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="Delivery"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTotal" />
+
+        <TextView
+            android:id="@+id/tvDeliveryDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="Free"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toStartOf="@id/tvTotalPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalPrice" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/secondGuideLine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp4"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="@id/secondGuideLine" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="@dimen/dp326"
+            android:layout_height="@dimen/dp54"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/bg_button_cart"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="Checkout"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondGuideLine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

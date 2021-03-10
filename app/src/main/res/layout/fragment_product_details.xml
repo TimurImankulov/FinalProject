@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Products Details"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintEnd_toStartOf="@id/ivCart"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:src="@drawable/ic_cart_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bg_round_frame"
+        android:paddingBottom="@dimen/dp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp24"
+            android:fontFamily="@font/mark_pro_medium"
+            android:text="Galaxy Note 20 Ultra"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/sp24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp20"
+            android:src="@drawable/ic_btn_favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp6"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+        <TextView
+            android:id="@+id/tvShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="Shop"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toStartOf="@id/tvDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivStar" />
+
+        <TextView
+            android:id="@+id/tvDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="Details"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toStartOf="@id/tvFeatures"
+            app:layout_constraintStart_toEndOf="@id/tvShop"
+            app:layout_constraintTop_toBottomOf="@id/ivStar" />
+
+        <TextView
+            android:id="@+id/tvFeatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="Features"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvDetails"
+            app:layout_constraintTop_toBottomOf="@id/ivStar" />
+
+        <TextView
+            android:id="@+id/tvCPU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:drawableTop="@drawable/ic_pcu"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="Exynos 990"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintBottom_toBottomOf="@id/tvCamera"
+            app:layout_constraintEnd_toStartOf="@id/tvCamera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvShop" />
+
+        <TextView
+            android:id="@+id/tvCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:drawableTop="@drawable/ic_camera"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="108 + 12 mp"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toStartOf="@id/tvRAM"
+            app:layout_constraintStart_toEndOf="@id/tvCPU"
+            app:layout_constraintTop_toBottomOf="@id/tvShop" />
+
+        <TextView
+            android:id="@+id/tvRAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:drawableTop="@drawable/ic_ram"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="8 GB"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toStartOf="@id/tvMemoryCard"
+            app:layout_constraintStart_toEndOf="@id/tvCamera"
+            app:layout_constraintTop_toBottomOf="@id/tvShop" />
+
+        <TextView
+            android:id="@+id/tvMemoryCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:drawableTop="@drawable/ic_memory_card"
+            android:fontFamily="@font/mark_pro_regular"
+            android:text="256 GB"
+            android:textSize="@dimen/sp11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvRAM"
+            app:layout_constraintTop_toBottomOf="@id/tvShop" />
+
+        <TextView
+            android:id="@+id/tvSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:fontFamily="@font/mark_pro_medium"
+            android:text="Select color and capacity"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCamera" />
+
+        <ImageView
+            android:id="@+id/ivBrownColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:src="@drawable/ic_brown_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelect" />
+
+        <ImageView
+            android:id="@+id/ivBlueColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:src="@drawable/ic_blue_circle"
+            app:layout_constraintStart_toEndOf="@id/ivBrownColor"
+            app:layout_constraintTop_toBottomOf="@id/tvSelect" />
+
+        <TextView
+            android:id="@+id/tvFirstGB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp24"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="128 GB"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/sp13"
+            app:layout_constraintStart_toEndOf="@id/ivBlueColor"
+            app:layout_constraintTop_toBottomOf="@id/tvSelect" />
+
+        <TextView
+            android:id="@+id/tvSecondGB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp24"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="256 GB"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/sp13"
+            app:layout_constraintStart_toEndOf="@id/tvFirstGB"
+            app:layout_constraintTop_toBottomOf="@id/tvSelect" />
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="@dimen/dp355"
+            android:layout_height="@dimen/dp54"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/bg_button_cart"
+            android:fontFamily="@font/mark_pro_bold"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBrownColor"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
