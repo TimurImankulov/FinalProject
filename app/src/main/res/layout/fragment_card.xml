@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_Card"
+                android:layout_width="0dp"
+                android:layout_height="198dp"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp70"
+                android:layout_marginEnd="@dimen/dp20"
+                android:src="@drawable/card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/bg_round_frame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_Card"
+                app:layout_constraintVertical_bias="0.493"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <EditText
+                    android:id="@+id/et_CardHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@drawable/bg_edtext"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:hint="@string/card_holder"
+                    android:paddingStart="@dimen/dp16"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.onlinestore.view.CardNumberEditText
+                    android:id="@+id/et_CardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@drawable/bg_edtext"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:hint="@string/card_number"
+                    android:paddingStart="@dimen/dp16"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_CardHolder" />
+
+                <com.example.onlinestore.view.ExpirationDataEditText
+                    android:id="@+id/et_ExpirationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@drawable/bg_edtext"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:hint="@string/expiration_date"
+                    android:paddingStart="@dimen/dp16"
+                    android:paddingEnd="@dimen/dp16"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintEnd_toStartOf="@id/et_CVV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_CardNumber" />
+
+                <EditText
+                    android:id="@+id/et_CVV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@drawable/bg_edtext"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:hint="@string/cvv"
+                    android:paddingStart="@dimen/dp16"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/et_ExpirationDate"
+                    app:layout_constraintTop_toBottomOf="@id/et_CardNumber" />
+
+
+                <TextView
+                    android:id="@+id/tvCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_ExpirationDate"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp20"
+                    android:text="Card Number"/>
+
+                <Button
+                    android:id="@+id/btn_AddCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp54"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/bg_button_cart"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:letterSpacing="0.02"
+                    android:text="@string/add_card"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

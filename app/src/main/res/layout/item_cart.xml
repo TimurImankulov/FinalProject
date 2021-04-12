@@ -7,45 +7,100 @@
     android:padding="@dimen/dp8">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivProduct"
+        android:id="@+id/iv_Product"
         android:layout_width="@dimen/dp88"
         android:layout_height="@dimen/dp88"
-        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@id/tvProductName"
+        app:layout_constraintEnd_toStartOf="@id/tv_ProductName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvProductName"
+        android:id="@+id/tv_ProductName"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp16"
-        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp10"
         android:fontFamily="@font/mark_pro_medium"
         android:gravity="left"
         android:maxLines="2"
         android:text="Galaxy Note 20 \nUltra"
         android:textColor="@color/white"
         android:textSize="@dimen/sp20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivProduct"
-        app:layout_constraintTop_toTopOf="@id/ivProduct" />
+        app:layout_constraintEnd_toStartOf="@id/constraintQuantity"
+        app:layout_constraintStart_toEndOf="@id/iv_Product"
+        app:layout_constraintTop_toTopOf="@id/iv_Product" />
 
     <TextView
-        android:id="@+id/tvProductPrice"
+        android:id="@+id/tv_ProductPrice"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp16"
-        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp10"
         android:fontFamily="@font/mark_pro_medium"
         android:gravity="left"
         android:maxLines="1"
         android:text="$3000"
         android:textColor="@color/orange"
         android:textSize="@dimen/sp20"
-        app:layout_constraintBottom_toBottomOf="@id/ivProduct"
+        app:layout_constraintBottom_toBottomOf="@id/iv_Product"
+        app:layout_constraintEnd_toStartOf="@id/constraintQuantity"
+        app:layout_constraintStart_toEndOf="@id/iv_Product" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintQuantity"
+        android:layout_width="@dimen/dp26"
+        android:layout_height="@dimen/dp68"
+        android:layout_marginEnd="@dimen/dp8"
+        android:background="@drawable/bg_button_quantity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_Delete"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_Minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mark_pro_medium"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toTopOf="@id/btn_Plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_Minus" />
+
+        <ImageView
+            android:id="@+id/btn_Plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/btn_Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp4"
+        android:src="@drawable/ic_basket"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivProduct" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

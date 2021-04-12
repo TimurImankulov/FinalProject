@@ -20,9 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         val navIds = listOf(
             R.navigation.main,
-            R.navigation.cart,
+            R.navigation.catalog,
             R.navigation.favorites,
-            R.navigation.profile
+            R.navigation.profile,
+            R.navigation.cart,
         )
 
         navView.setupWithNavController(

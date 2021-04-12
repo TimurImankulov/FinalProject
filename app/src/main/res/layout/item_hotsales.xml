@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/mainCard"
-        android:layout_width="match_parent"
+        android:id="@+id/hotsales_ProductCard"
+        android:layout_width="312dp"
         android:layout_height="@dimen/dp172"
+        android:layout_marginHorizontal="@dimen/dp20"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginHorizontal="@dimen/dp20"
         app:cardCornerRadius="@dimen/dp15"
         tools:ignore="MissingConstraints">
 
@@ -20,60 +20,62 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/ivHotSales"
+                android:id="@+id/iv_HotSales"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/iphone"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/iphone" />
 
             <ImageView
-                android:id="@+id/ivNew"
+                android:id="@+id/iv_New"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp24"
+                android:layout_marginStart="@dimen/dp24"
                 android:layout_marginTop="@dimen/dp16"
                 android:src="@drawable/ic_resource_new"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tv_Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp24"
+                android:layout_marginStart="@dimen/dp24"
                 android:layout_marginTop="@dimen/dp18"
                 android:fontFamily="@font/sf_pro_display_bold"
                 android:text="Iphone 12"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp25"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivNew" />
+                app:layout_constraintTop_toBottomOf="@id/iv_New" />
 
             <TextView
-                android:id="@+id/tvDescriptions"
+                android:id="@+id/tv_Descriptions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp24"
+                android:layout_marginStart="@dimen/dp24"
                 android:layout_marginTop="@dimen/dp4"
                 android:fontFamily="@font/sf_pro_display_regular"
                 android:text="Súper.Mega.Rápido."
-                android:textSize="@dimen/sp11"
                 android:textColor="@color/white"
+                android:textSize="@dimen/sp11"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
-            
+                app:layout_constraintTop_toBottomOf="@id/tv_Title" />
+
             <Button
-                android:id="@+id/btnBuyNow"
+                android:id="@+id/btn_BuyNow"
                 android:layout_width="@dimen/dp98"
                 android:layout_height="@dimen/dp24"
-                android:text="Buy now!"
+                android:layout_marginStart="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp20"
                 android:background="@drawable/bg_button_buy"
                 android:fontFamily="@font/sf_pro_display_bold"
+                android:letterSpacing="0.03"
+                android:text="Buy now!"
+                android:textAllCaps="false"
                 android:textColor="@color/darkBlue"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDescriptions"
-                android:layout_marginLeft="@dimen/dp24"
-                android:layout_marginTop="@dimen/dp20"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_Descriptions" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

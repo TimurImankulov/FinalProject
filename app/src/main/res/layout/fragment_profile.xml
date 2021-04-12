@@ -1,6 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_Card"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/bg_round_frame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_PersonalInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="Personal Information"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_UserNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="User name"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_PersonalInfo" />
+
+                <TextView
+                    android:id="@+id/tv_UserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="Ivan Ivanov"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_UserNameTitle" />
+
+                <TextView
+                    android:id="@+id/tv_EmailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="E-mail"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_UserName" />
+
+                <TextView
+                    android:id="@+id/tv_Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="ivan.ivanov@gmail.com"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_EmailTitle" />
+
+                <TextView
+                    android:id="@+id/tv_PhoneNumberTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="Phone number"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Email" />
+
+                <TextView
+                    android:id="@+id/tv_PhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="7999 242-242-24"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_PhoneNumberTitle" />
+
+                <TextView
+                    android:id="@+id/tv_OrdersHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="History of orders"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_PhoneNumber" />
+
+                <TextView
+                    android:id="@+id/tv_SeeMoreOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="see more"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_OrdersHistory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_OrdersHistory" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_Orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tv_OrdersHistory" />
+
+                <Button
+                    android:id="@+id/btn_AddToCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp54"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/bg_button_cart"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:letterSpacing="0.02"
+                    android:text="Log out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerView_Orders" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

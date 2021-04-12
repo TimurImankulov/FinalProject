@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkBlue">
+    android:background="@color/darkBlue"
+    tools:context=".ui.splash.SplashActivity">
 
     <ImageView
         android:layout_width="@dimen/dp132"
@@ -22,14 +24,27 @@
         app:layout_constraintGuide_percent="0.43" />
 
     <TextView
+        android:id="@+id/tv_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/mark_pro_heavy"
-        android:text="Ecommerce \nConcept"
+        android:text="Smart \nBuy"
         android:textColor="@color/white"
         android:textSize="@dimen/sp30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideLine"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mark_pro_regular"
+        android:text="Online Store"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        android:layout_marginStart="@dimen/dp16"
+        app:layout_constraintTop_toBottomOf="@id/tv_Title"
+        app:layout_constraintStart_toStartOf="@id/guideLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

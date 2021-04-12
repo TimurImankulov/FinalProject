@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/catalog"
+    app:startDestination="@id/catalogFragment">
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.example.onlinestore.ui.bottomnavigation.catalog.CatalogFragment"
+        android:label="CatalogFragment" >
+        <action
+            android:id="@+id/action_catalogFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" >
+        <action
+            android:id="@+id/action_productDetailsFragment_to_relatedProductDetailsFragment"
+            app:destination="@id/relatedProductDetailsFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_specificationFragment"
+            app:destination="@id/specificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/relatedProductDetailsFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.RelatedProductDetailsFragment"
+        android:label="RelatedProductDetailsFragment" >
+        <action
+            android:id="@+id/action_relatedProductDetailsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_relatedProductDetailsFragment_to_specificationFragment"
+            app:destination="@id/specificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.DescriptionFragment"
+        android:label="DescriptionFragment" />
+    <fragment
+        android:id="@+id/specificationFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.SpecificationFragment"
+        android:label="SpecificationFragment" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.onlinestore.ui.bottomnavigation.main.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <argument
+            android:name="details"
+            app:argType="com.example.onlinestore.data.test.ProductListModel[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="data"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

@@ -3,66 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp20"
-        android:layout_marginTop="@dimen/dp20"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_arrow_back_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent"
+    android:background="@color/grey">
 
     <TextView
-        android:id="@+id/tvAddress"
+        android:id="@+id/tv_Cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dp20"
-        android:fontFamily="@font/mark_pro_medium"
-        android:text="Add address"
-        android:textColor="@color/darkBlue"
-        android:textSize="@dimen/sp15"
-        app:layout_constraintBottom_toBottomOf="@id/ivCart"
-        app:layout_constraintEnd_toStartOf="@id/ivCart"
-        app:layout_constraintTop_toTopOf="@id/ivCart" />
-
-    <ImageView
-        android:id="@+id/ivCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp20"
-        android:layout_marginRight="@dimen/dp20"
-        android:src="@drawable/ic_btn_location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp20"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp16"
         android:fontFamily="@font/mark_pro_bold"
         android:text="My Cart"
         android:textColor="@color/darkBlue"
-        android:textSize="@dimen/sp35"
+        android:textSize="@dimen/sp25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_round_frame_cart"
+        android:paddingBottom="@dimen/dp20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+        app:layout_constraintTop_toBottomOf="@id/tv_Cart">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerView_Cart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -70,23 +37,135 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/firstGuideLine"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.65" />
+      <TextView
+          android:id="@+id/tv_DeliveryTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:fontFamily="@font/mark_pro_medium"
+          android:text="Way of Delivery"
+          android:textColor="@color/white"
+          android:textSize="@dimen/sp16"
+          android:layout_marginTop="@dimen/dp16"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/recyclerView_Cart"/>
+
+        <RadioGroup
+            android:id="@+id/deliveryRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_DeliveryTitle">
+
+            <RadioButton
+                android:id="@+id/rb_Pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro_regular"
+                android:text="Pickup"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <RadioButton
+                android:id="@+id/rb_Delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro_regular"
+                android:text="Delivery"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_DeliveryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add address"
+            android:textSize="12sp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/deliveryRadioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"/>
+
+        <TextView
+            android:id="@+id/tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/mark_pro_medium"
+            android:text="Date and time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_DeliveryAddress" />
+
+        <EditText
+            android:id="@+id/et_DataOfDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add data"
+            android:textSize="12sp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dp20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_Date"/>
+        <TextView
+            android:id="@+id/tv_Payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/mark_pro_medium"
+            android:text="Payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_DataOfDelivery" />
+
+        <RadioGroup
+            android:id="@+id/paymentRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_Payment">
+
+            <RadioButton
+                android:id="@+id/rb_CreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro_regular"
+                android:text="Credit or debit card"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <RadioButton
+                android:id="@+id/rb_CashPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro_regular"
+                android:text="Cash payment"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </RadioGroup>
 
         <View
+            android:id="@+id/firstGuideLine"
+            android:layout_marginTop="@dimen/dp16"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp2"
             android:layout_marginLeft="@dimen/dp4"
             android:layout_marginRight="@dimen/dp4"
-            android:background="@color/black"
-            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/paymentRadioGroup" />
 
         <TextView
-            android:id="@+id/tvTotal"
+            android:id="@+id/tv_Total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp50"
@@ -99,7 +178,7 @@
             app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
 
         <TextView
-            android:id="@+id/tvTotalPrice"
+            android:id="@+id/tv_Price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp16"
@@ -112,7 +191,7 @@
             app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
 
         <TextView
-            android:id="@+id/tvDelivery"
+            android:id="@+id/tv_Delivery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp50"
@@ -122,10 +201,10 @@
             android:textColor="@color/white"
             android:textSize="@dimen/sp15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTotal" />
+            app:layout_constraintTop_toBottomOf="@id/tv_Total" />
 
         <TextView
-            android:id="@+id/tvDeliveryDesc"
+            android:id="@+id/tv_DeliveryDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp16"
@@ -133,34 +212,33 @@
             android:text="Free"
             android:textColor="@color/white"
             android:textSize="@dimen/sp15"
-            app:layout_constraintStart_toStartOf="@id/tvTotalPrice"
-            app:layout_constraintTop_toBottomOf="@id/tvTotalPrice" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/secondGuideLine"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.8" />
+            app:layout_constraintStart_toStartOf="@id/tv_Price"
+            app:layout_constraintTop_toBottomOf="@id/tv_Price" />
 
         <View
+            android:id="@+id/secondGuideLine"
+            android:layout_marginTop="@dimen/dp8"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp1"
             android:layout_marginLeft="@dimen/dp4"
             android:layout_marginRight="@dimen/dp4"
-            android:background="@color/black"
-            app:layout_constraintTop_toTopOf="@id/secondGuideLine" />
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_DeliveryDesc" />
 
         <Button
-            android:id="@+id/btnCheckout"
+            android:id="@+id/btn_Checkout"
             android:layout_width="@dimen/dp326"
             android:layout_height="@dimen/dp54"
             android:layout_marginTop="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp20"
             android:background="@drawable/bg_button_cart"
             android:fontFamily="@font/mark_pro_bold"
+            android:letterSpacing="0.02"
             android:text="Checkout"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="@dimen/sp20"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/secondGuideLine" />

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <TextView
+        android:id="@+id/tv_OrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp24"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="№ 0000124124"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Done"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_OrderNumber" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_Orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_Status" />
+
+    <TextView
+        android:id="@+id/tv_Delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp24"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Way Of Delivery"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView_Orders" />
+
+    <TextView
+        android:id="@+id/tv_DeliveryInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Delivery"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Delivery" />
+
+    <TextView
+        android:id="@+id/tv_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp24"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Data"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_DeliveryInfo" />
+
+    <TextView
+        android:id="@+id/tv_DataInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Mart 27, 2021"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Data" />
+
+    <TextView
+        android:id="@+id/tv_Customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp24"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Customer"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_DataInfo" />
+
+    <TextView
+        android:id="@+id/tv_CustomerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Ivan Ivanov"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Customer" />
+
+    <TextView
+        android:id="@+id/tv_Payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp24"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Payment"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_CustomerInfo" />
+
+    <TextView
+        android:id="@+id/tv_PaymentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Card"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Payment" />
+
+    <TextView
+        android:id="@+id/tv_PaymentStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Done"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_PaymentInfo" />
+
+    <TextView
+        android:id="@+id/tv_Products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Products"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_PaymentStatus" />
+
+    <TextView
+        android:id="@+id/tv_PaymentDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Delivery"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Products" />
+
+    <TextView
+        android:id="@+id/tv_Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="Total"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_PaymentDelivery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

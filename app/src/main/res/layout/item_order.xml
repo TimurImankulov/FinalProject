@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/tv_Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="0001"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_regular"
+        android:text="Mart 27"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_regular"
+        android:text="Done"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Number" />
+
+    <TextView
+        android:id="@+id/tv_Price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="$1500"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tv_Data" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

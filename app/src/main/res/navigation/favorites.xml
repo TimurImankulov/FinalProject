@@ -6,5 +6,42 @@
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.onlinestore.ui.bottomnavigation.favorites.FavoritesFragment"
-        android:label="FavoritesFragment" />
+        android:label="FavoritesFragment" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" >
+        <action
+            android:id="@+id/action_productDetailsFragment_to_relatedProductDetailsFragment"
+            app:destination="@id/relatedProductDetailsFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_specificationFragment3"
+            app:destination="@id/specificationFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/relatedProductDetailsFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.RelatedProductDetailsFragment"
+        android:label="RelatedProductDetailsFragment" >
+        <action
+            android:id="@+id/action_relatedProductDetailsFragment_to_descriptionFragment"
+            app:destination="@id/descriptionFragment" />
+        <action
+            android:id="@+id/action_relatedProductDetailsFragment_to_specificationFragment3"
+            app:destination="@id/specificationFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionFragment"
+        android:name="com.example.onlinestore.ui.productsdetails.DescriptionFragment"
+        android:label="DescriptionFragment" />
+    <fragment
+        android:id="@+id/specificationFragment3"
+        android:name="com.example.onlinestore.ui.productsdetails.SpecificationFragment"
+        android:label="SpecificationFragment" />
 </navigation>

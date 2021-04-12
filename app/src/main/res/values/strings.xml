@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">OnlineStore</string>
+    <string name="select_color">Select color</string>
+    <string name="select_capacity">Select capacity</string>
+    <string name="related_products">Products related to this item</string>
+    <string name="description">Description</string>
+    <string name="details">Details</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="btn_login">Log in</string>
+    <string name="registration">registration</string>
+    <string name="title_registration">Registration</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_password">Enter_password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="register">Register</string>
+    <string name="question">Already Registered?</string>
+    <string name="skip_login">skip login</string>
+    <string name="card_holder">Card holder name</string>
+    <string name="card_number">*Card number</string>
+    <string name="expiration_date">*Expiration date</string>
+    <string name="cvv">*CVV</string>
+    <string name="add_card">Add Card</string>
+    <string name="date">%1d/%2d/%3d</string>
 </resources>

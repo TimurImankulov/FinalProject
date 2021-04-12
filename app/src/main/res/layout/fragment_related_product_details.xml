@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/slide_ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp350"
+                android:layout_marginTop="@dimen/dp20"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_frame"
+                android:paddingBottom="@dimen/dp20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/slide_ViewPager">
+
+                <TextView
+                    android:id="@+id/tv_ProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="Galaxy Note 20 Ultra"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp24"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_Favorites"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp24"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:text="$1,047"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ProductName" />
+
+                <TextView
+                    android:id="@+id/tv_OldPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:paddingBottom="@dimen/dp2"
+                    android:text="$1500"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_Price"
+                    app:layout_constraintStart_toEndOf="@id/tv_Price" />
+
+                <CheckBox
+                    android:id="@+id/btn_Favorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:background="@android:color/transparent"
+                    android:button="@drawable/bg_btn_checkbox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.onlinestore.view.RatingBarSvg
+                    android:id="@+id/rating_Bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp18"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:indeterminateDrawable="@drawable/bg_ratingbar_selector"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/bg_ratingbar_selector"
+                    android:rating="0"
+                    android:stepSize="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Price" />
+
+                <TextView
+                    android:id="@+id/tv_DescTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="@string/description"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rating_Bar" />
+
+                <TextView
+                    android:id="@+id/tv_SeeMoreDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="see more"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rating_Bar" />
+
+                <TextView
+                    android:id="@+id/tv_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:gravity="left"
+                    android:text="Introducing Galaxy Note20 Ultra: The Power to Work. The Power to Play. This isn't the time to slow down, this is the time to forge ahead and take the opportunities that come your way. You don’t need a smartphone. You need a power phone. One as beautiful as it is intelligent with a pen that is mightier, a battery that doesn't leave you hanging and is as well-connected as you. Galaxy Note20 Ultra takes power"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_DescTitle" />
+
+                <TextView
+                    android:id="@+id/tv_DetailsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="@string/details"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Description" />
+
+                <TextView
+                    android:id="@+id/tv_SeeMoreDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="see more"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Description" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_ProductSpecification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp70"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/tv_DetailsTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp20"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_arrow_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_AddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp54"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/bg_button_cart"
+        android:fontFamily="@font/mark_pro_bold"
+        android:letterSpacing="0.02"
+        android:text="Add to Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
