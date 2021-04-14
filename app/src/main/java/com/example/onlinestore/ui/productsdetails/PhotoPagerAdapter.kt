@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.test.Images
+import com.example.onlinestore.data.model.Images
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_slide.view.*
 

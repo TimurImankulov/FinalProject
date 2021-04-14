@@ -5,7 +5,6 @@ import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
-import com.example.onlinestore.data.model.HistoryOrdersModel
 import com.example.onlinestore.databinding.FragmentOrderBinding
 import com.example.onlinestore.utils.ext.viewBinding
 

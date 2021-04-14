@@ -7,7 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
 import com.example.onlinestore.data.local.PreferenceHelper
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
 import com.example.onlinestore.databinding.FragmentProfileBinding
 import com.example.onlinestore.utils.decorators.ItemOffsetDecoration
 import com.example.onlinestore.utils.ext.viewBinding

@@ -7,9 +7,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
-import com.example.onlinestore.data.test.MainModel
-import com.example.onlinestore.data.test.ProductCategoryModel
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.MainModel
+import com.example.onlinestore.data.model.ProductCategoryModel
+import com.example.onlinestore.data.model.ProductListModel
 import com.example.onlinestore.databinding.FragmentMainBinding
 import com.example.onlinestore.utils.decorators.ItemOffsetDecoration
 import com.example.onlinestore.utils.ext.viewBinding
@@ -47,28 +47,28 @@ class MainFragment : BaseFragment() {
 
     private fun setupListeners() {
         binding.tvSeeMoreBestSales.setOnClickListener {
-            vm.datafirebase.observe(viewLifecycleOwner, Observer {
+            vm.showData().observe(viewLifecycleOwner, Observer {
                 navigateToBestSalesCategory(it)
             })
         }
 
         binding.tvSeeMoreHotSales.setOnClickListener {
-            vm.datafirebase.observe(viewLifecycleOwner, Observer {
+            vm.showData().observe(viewLifecycleOwner, Observer {
                 navigateToHotSalesCategory(it)
             })
         }
     }
 
     private fun setupViewModel() {
-        vm.datafirebase.observe(viewLifecycleOwner, Observer {
+        vm.showData().observe(viewLifecycleOwner, Observer {
             categoryAdapter.submitList(it.category?.product_category)
         })
 
-        vm.datafirebase.observe(viewLifecycleOwner, Observer {
+        vm.showData().observe(viewLifecycleOwner, Observer {
             productCategoryAdapter.submitList(it?.category?.product_category?.get(categoryPosition)?.items?.bestsales?.product_list)
         })
 
-        vm.datafirebase.observe(viewLifecycleOwner, Observer {
+        vm.showData().observe(viewLifecycleOwner, Observer {
             binding.tvTitle.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_title
             binding.tvDescriptions.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_description
         })

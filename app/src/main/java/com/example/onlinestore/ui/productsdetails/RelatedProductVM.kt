@@ -3,7 +3,7 @@ package com.example.onlinestore.ui.productsdetails
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.onlinestore.data.local.OnlineStoreDataBase
-import com.example.onlinestore.data.test.RelatedProductModel
+import com.example.onlinestore.data.model.RelatedProductModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

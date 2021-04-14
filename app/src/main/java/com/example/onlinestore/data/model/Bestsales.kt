@@ -1,4 +1,4 @@
-package com.example.onlinestore.data.test
+package com.example.onlinestore.data.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -16,9 +16,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @Parcelize
-data class CatalogModel (
+data class Bestsales (
 
-	@SerializedName("image") val image : String? = null,
 	@SerializedName("title") val title : String? = null,
-	@SerializedName("catalog_items") val catalog_items : List<CatalogItemsModel>? = null
+	@SerializedName("product_list") val product_list : List<ProductListModel>? = null
 ):Parcelable

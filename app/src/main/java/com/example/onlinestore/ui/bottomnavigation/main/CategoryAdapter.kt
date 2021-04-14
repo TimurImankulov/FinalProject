@@ -6,15 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.model.CategoryModel
-import com.example.onlinestore.data.test.ProductCategoryModel
-import com.example.onlinestore.utils.diffUtils.DiffUtilsItems
-import com.example.onlinestore.utils.diffUtils.DiffUtilsTest
+import com.example.onlinestore.data.model.ProductCategoryModel
+import com.example.onlinestore.utils.diffUtils.DiffUtilsCategory
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_category.view.*
 
 class CategoryAdapter(private val listener: (position: Int, item: ProductCategoryModel) -> Unit) :
-    ListAdapter<ProductCategoryModel, CategoryViewHolder>(DiffUtilsTest.diffUtilItems) {
+    ListAdapter<ProductCategoryModel, CategoryViewHolder>(DiffUtilsCategory.diffUtilItems) {
 
     private var lastSelectedPos = -1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {

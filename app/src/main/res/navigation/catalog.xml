@@ -53,7 +53,7 @@
             app:destination="@id/productDetailsFragment" />
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.ProductListModel[]"
+            app:argType="com.example.onlinestore.data.model.ProductListModel[]"
             app:nullable="true"
             android:defaultValue="@null" />
         <argument

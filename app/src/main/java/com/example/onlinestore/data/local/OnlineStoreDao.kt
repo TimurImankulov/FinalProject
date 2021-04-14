@@ -2,7 +2,7 @@ package com.example.onlinestore.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.ProductListModel
 
 @Dao
 interface OnlineStoreDao {

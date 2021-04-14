@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.ProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsBestSales
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.squareup.picasso.Picasso
@@ -42,9 +42,5 @@ class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.hotsales_ProductCard.setOnClickListener {
             listener.invoke(item)
         }
-
-//
-//        itemView.ch_Favorites.isChecked = item.favorite!!
-//    }
     }
 }

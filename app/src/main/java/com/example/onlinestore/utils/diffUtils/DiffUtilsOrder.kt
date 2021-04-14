@@ -1,9 +1,7 @@
 package com.example.onlinestore.utils.diffUtils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.onlinestore.data.model.CategoryModel
-import com.example.onlinestore.data.model.HistoryOrdersModel
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
 
 object DiffUtilsOrder {
 

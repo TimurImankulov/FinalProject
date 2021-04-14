@@ -5,10 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.onlinestore.data.test.CartProductListModel
-import com.example.onlinestore.data.test.ItemFavoritesModel
-import com.example.onlinestore.data.test.OrderProductListModel
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.CartProductListModel
+import com.example.onlinestore.data.model.ItemFavoritesModel
+import com.example.onlinestore.data.model.OrderProductListModel
+import com.example.onlinestore.data.model.ProductListModel
 
 @Database(entities = [ProductListModel::class, ItemFavoritesModel::class, CartProductListModel::class, OrderProductListModel::class], version = 1)
 @TypeConverters(value = [TypeConverter::class])

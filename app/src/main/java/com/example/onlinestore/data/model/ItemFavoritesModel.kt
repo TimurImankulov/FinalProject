@@ -1,4 +1,4 @@
-package com.example.onlinestore.data.test
+package com.example.onlinestore.data.model
 
 import android.os.Parcelable
 import androidx.room.Entity

@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.model.HistoryOrdersModel
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsOrder
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_bought_product.view.*

@@ -17,7 +17,7 @@
         android:label="OrderFragment" >
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.OrderProductListModel"
+            app:argType="com.example.onlinestore.data.model.OrderProductListModel"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>

@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.onlinestore.data.local.OnlineStoreDataBase
-import com.example.onlinestore.data.test.CartProductListModel
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
+import com.example.onlinestore.data.model.CartProductListModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsOrder
 import kotlinx.android.synthetic.main.item_order.view.*
 import kotlin.random.Random

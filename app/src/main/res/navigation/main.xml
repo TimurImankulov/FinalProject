@@ -32,7 +32,7 @@
             app:destination="@id/photoDetailsFragment" />
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.ProductListModel"
+            app:argType="com.example.onlinestore.data.model.ProductListModel"
             app:nullable="true" />
     </fragment>
     <fragment
@@ -59,7 +59,7 @@
             app:destination="@id/photoDetailsFragment" />
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.RelatedProductModel"
+            app:argType="com.example.onlinestore.data.model.RelatedProductModel"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
@@ -69,7 +69,7 @@
         android:label="SpecificationFragment" >
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.Specification[]"
+            app:argType="com.example.onlinestore.data.model.Specification[]"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
@@ -79,7 +79,7 @@
         android:label="PhotoDetailsFragment" >
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.Images"
+            app:argType="com.example.onlinestore.data.model.Images"
             app:nullable="true" />
     </fragment>
     <fragment
@@ -91,7 +91,7 @@
             app:destination="@id/productDetailsFragment" />
         <argument
             android:name="details"
-            app:argType="com.example.onlinestore.data.test.ProductListModel[]"
+            app:argType="com.example.onlinestore.data.model.ProductListModel[]"
             app:nullable="true"
             android:defaultValue="@null" />
         <argument

@@ -1,7 +1,6 @@
 package com.example.onlinestore.ui.productsdetails
 
-import com.example.onlinestore.data.test.*
-import com.google.gson.annotations.SerializedName
+import com.example.onlinestore.data.model.*
 
 object ModelWrapper {
 

@@ -3,8 +3,7 @@ package com.example.onlinestore.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.onlinestore.data.test.CartProductListModel
-import com.example.onlinestore.data.test.OrderProductListModel
+import com.example.onlinestore.data.model.OrderProductListModel
 
 @Dao
 interface OrderDao {

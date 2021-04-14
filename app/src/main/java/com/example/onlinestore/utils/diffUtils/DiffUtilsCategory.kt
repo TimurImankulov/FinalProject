@@ -1,9 +1,9 @@
 package com.example.onlinestore.utils.diffUtils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.onlinestore.data.test.ProductCategoryModel
+import com.example.onlinestore.data.model.ProductCategoryModel
 
-object DiffUtilsTest {
+object DiffUtilsCategory {
 
     val diffUtilItems = object : DiffUtil.ItemCallback<ProductCategoryModel>() {
         override fun areItemsTheSame(oldItem: ProductCategoryModel, newItem: ProductCategoryModel): Boolean {

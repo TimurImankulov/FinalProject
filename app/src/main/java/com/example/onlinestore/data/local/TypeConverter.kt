@@ -1,10 +1,10 @@
 package com.example.onlinestore.data.local
 
 import androidx.room.TypeConverter
-import com.example.onlinestore.data.test.CartProductListModel
-import com.example.onlinestore.data.test.Images
-import com.example.onlinestore.data.test.RelatedProductModel
-import com.example.onlinestore.data.test.Specification
+import com.example.onlinestore.data.model.CartProductListModel
+import com.example.onlinestore.data.model.Images
+import com.example.onlinestore.data.model.RelatedProductModel
+import com.example.onlinestore.data.model.Specification
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

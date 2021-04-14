@@ -3,8 +3,8 @@ package com.example.onlinestore.ui.productsdetails
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.onlinestore.data.test.ListSpecificationsModel
-import com.example.onlinestore.data.test.Specification
+import com.example.onlinestore.data.model.ListSpecificationsModel
+import com.example.onlinestore.data.model.Specification
 import com.example.onlinestore.databinding.ItemHeaderBinding
 import com.example.onlinestore.databinding.ItemSpecificationBinding
 

@@ -1,11 +1,9 @@
 package com.example.onlinestore.ui.productsdetails
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.onlinestore.data.local.OnlineStoreDataBase
-import com.example.onlinestore.data.test.CartProductListModel
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.ProductListModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

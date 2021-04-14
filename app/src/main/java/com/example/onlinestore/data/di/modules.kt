@@ -19,7 +19,7 @@ import org.koin.dsl.module
 
 val viewModelModule: Module = module {
     viewModel { CatalogViewModel(get()) }
-    viewModel { MainViewModel() }
+    viewModel { MainViewModel(get()) }
     viewModel { FavoritesViewModel(get()) }
     viewModel { ProductDetailsVM(db = get()) }
     viewModel { CartViewModel(db = get()) }

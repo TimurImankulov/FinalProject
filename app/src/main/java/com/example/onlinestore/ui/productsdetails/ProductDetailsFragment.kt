@@ -1,19 +1,15 @@
 package com.example.onlinestore.ui.productsdetails
 
 import android.os.Bundle
-import android.system.Os.bind
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
-import com.example.onlinestore.data.model.CategoryModel
-import com.example.onlinestore.data.model.SpecsModel
-import com.example.onlinestore.data.test.Images
-import com.example.onlinestore.data.test.RelatedProductModel
-import com.example.onlinestore.data.test.Specification
+import com.example.onlinestore.data.model.Images
+import com.example.onlinestore.data.model.RelatedProductModel
+import com.example.onlinestore.data.model.Specification
 import com.example.onlinestore.databinding.FragmentProductDetailsBinding
-import com.example.onlinestore.ui.bottomnavigation.favorites.FavoritesViewModel
 import com.example.onlinestore.utils.decorators.ItemOffsetDecoration
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.example.onlinestore.utils.ext.viewBinding

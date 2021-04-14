@@ -7,8 +7,8 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.test.CatalogModel
-import com.example.onlinestore.data.test.ProductListModel
+import com.example.onlinestore.data.model.CatalogModel
+import com.example.onlinestore.data.model.ProductListModel
 
 
 class ExpandableAdapter(private val listener: (list: List<ProductListModel>?) -> Unit) : BaseExpandableListAdapter() {

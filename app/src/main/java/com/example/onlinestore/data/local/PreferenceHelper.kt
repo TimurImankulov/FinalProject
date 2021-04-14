@@ -14,58 +14,69 @@ object PreferenceHelper {
 
     private var preference: SharedPreferences? = null
 
-    fun init(context: Context){
+    fun init(context: Context) {
         preference = context.getSharedPreferences(
-            PREFERENCE_NAME, Context.MODE_PRIVATE)
+            PREFERENCE_NAME, Context.MODE_PRIVATE
+        )
     }
 
-    fun setName(data:String){
+    fun setName(data: String) {
         preference?.edit()?.putString(
-            NAME, data)?.apply()
+            NAME, data
+        )?.apply()
     }
 
-     fun getName(): String? {
-         return preference?.getString(
-            NAME, null)
+    fun getName(): String? {
+        return preference?.getString(
+            NAME, null
+        )
     }
 
-    fun setPhoneNumber(data:String){
+    fun setPhoneNumber(data: String) {
         preference?.edit()?.putString(
-            PHONE_NUMBER, data)?.apply()
+            PHONE_NUMBER, data
+        )?.apply()
     }
 
     fun getPhoneNumber(): String? {
         return preference?.getString(
-            PHONE_NUMBER, null)
+            PHONE_NUMBER, null
+        )
     }
 
-    fun setEmail(data:String){
+    fun setEmail(data: String) {
         preference?.edit()?.putString(
-            E_MAIL, data)?.apply()
+            E_MAIL, data
+        )?.apply()
     }
 
     fun getEmail(): String? {
         return preference?.getString(
-            E_MAIL, null)
+            E_MAIL, null
+        )
     }
 
-    fun setPassword(data:String){
+    fun setPassword(data: String) {
         preference?.edit()?.putString(
-            PASSWORD, data)?.apply()
+            PASSWORD, data
+        )?.apply()
     }
 
     fun getPassword(): String? {
         return preference?.getString(
-            PASSWORD, null)
+            PASSWORD, null
+        )
     }
 
-    fun setRepeatPassword(data:String){
+    fun setRepeatPassword(data: String) {
         preference?.edit()?.putString(
-            REPEAT_PASSWORD, data)?.apply()
+            REPEAT_PASSWORD, data
+        )?.apply()
     }
 
     fun getRepeatPassword(): String? {
         return preference?.getString(
-            REPEAT_PASSWORD, null)
+            REPEAT_PASSWORD, null
+        )
     }
 }

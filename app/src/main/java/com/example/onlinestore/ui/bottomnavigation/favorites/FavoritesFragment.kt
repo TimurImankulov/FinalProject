@@ -6,12 +6,9 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
-import com.example.onlinestore.data.model.CategoryModel
 import com.example.onlinestore.databinding.FragmentFavoritesBinding
-import com.example.onlinestore.ui.bottomnavigation.main.MainViewModel
 import com.example.onlinestore.utils.decorators.ItemOffsetDecoration
 import com.example.onlinestore.utils.ext.viewBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FavoritesFragment:BaseFragment() {
@@ -51,42 +48,5 @@ class FavoritesFragment:BaseFragment() {
     private fun navigateToProductDetails() {
         val destination = FavoritesFragmentDirections.actionFavoritesFragmentToProductDetailsFragment()
         findNavController().navigate(destination)
-    }
-
-    private fun generateBestData(): List<CategoryModel>? {
-        val list = arrayListOf<CategoryModel>()
-
-        list.add(
-            CategoryModel(
-                image = R.drawable.samsung, title = "Samsung Galaxy s20 Ultra"
-            )
-        )
-        list.add(
-            CategoryModel(
-                image = R.drawable.xiaomi, title = "Xiaomi Mi 10 Pro"
-            )
-        )
-        list.add(
-            CategoryModel(
-                image = R.drawable.samsung_note, title = "Samsung Note 20 Ultra"
-            )
-        )
-        list.add(
-            CategoryModel(
-                image = R.drawable.motorola, title = "Motorola One Edge"
-            )
-        )
-        list.add(
-            CategoryModel(
-                image = R.drawable.samsung, title = "Samsung Galaxy s20 Ultra"
-            )
-        )
-        list.add(
-            CategoryModel(
-                image = R.drawable.xiaomi, title = "Xiaomi Mi 10 Pro"
-            )
-        )
-
-        return list
     }
 }

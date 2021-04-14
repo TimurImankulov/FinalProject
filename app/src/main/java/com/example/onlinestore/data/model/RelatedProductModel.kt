@@ -1,6 +1,7 @@
-package com.example.onlinestore.data.test
+package com.example.onlinestore.data.model
 
 import android.os.Parcelable
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
@@ -16,8 +17,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @Parcelize
-data class Specification (
-
-	@SerializedName("header") val header : String? = null,
-	@SerializedName("list_specification") val list_specification : List<ListSpecificationsModel>? = null
+data class RelatedProductModel (
+    @PrimaryKey
+   // val id:Int? = null,
+    @SerializedName("title") val title : String? = null,
+    @SerializedName("full_title") val full_title : String? = null,
+    @SerializedName("images") val images : List<Images>? = null,
+    @SerializedName("price") val priceNew : String? = null,
+    val image : String? = null,
+    @SerializedName("old_price") val old_price : String? = null,
+    @SerializedName("favorite") val favorite : Boolean? = null,
+    @SerializedName("rank") val rank : Int? = null,
+    @SerializedName("description") val description : String? = null,
+    @SerializedName("specification") val specification : List<Specification>? = null
 ):Parcelable
