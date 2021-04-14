@@ -1,4 +1,4 @@
-package com.example.onlinestore.ui.productsdetails
+package com.example.onlinestore.ui.relatedproductdetails
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +9,8 @@ import com.example.onlinestore.R
 import com.example.onlinestore.data.model.RelatedProductModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsRelatedProduct
 import com.example.onlinestore.utils.ext.strikeThroughSpan
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.item_cart.view.*
 import kotlinx.android.synthetic.main.item_related_product.view.hotsales_ProductCard
 import kotlinx.android.synthetic.main.item_related_product.view.tv_OldPrice
 import kotlinx.android.synthetic.main.item_related_product.view.tv_Price
@@ -29,8 +31,12 @@ class RelatedProductAdapter(private val listener: (item: RelatedProductModel) ->
 class RelatedProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: RelatedProductModel, listener: (item: RelatedProductModel) -> Unit) {
         itemView.tv_Title.text = item.title
-        itemView.tv_Price.text = item.priceNew
+        itemView.tv_Price.text = item.price
         itemView.tv_OldPrice.text = item.old_price?.strikeThroughSpan()
+
+        Picasso.get()
+            .load(item.image)
+            .into(itemView.iv_Product)
 
         itemView.hotsales_ProductCard.setOnClickListener {
               listener.invoke(item)

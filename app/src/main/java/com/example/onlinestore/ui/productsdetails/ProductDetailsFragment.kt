@@ -10,6 +10,7 @@ import com.example.onlinestore.data.model.Images
 import com.example.onlinestore.data.model.RelatedProductModel
 import com.example.onlinestore.data.model.Specification
 import com.example.onlinestore.databinding.FragmentProductDetailsBinding
+import com.example.onlinestore.ui.relatedproductdetails.RelatedProductAdapter
 import com.example.onlinestore.utils.decorators.ItemOffsetDecoration
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.example.onlinestore.utils.ext.viewBinding

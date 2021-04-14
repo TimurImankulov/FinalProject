@@ -7,11 +7,10 @@ import com.example.onlinestore.data.repository.FirebaseRepository
 import com.example.onlinestore.data.repository.FirebaseRepositoryImpl
 import com.example.onlinestore.ui.bottomnavigation.cart.CartViewModel
 import com.example.onlinestore.ui.bottomnavigation.catalog.CatalogViewModel
-import com.example.onlinestore.ui.bottomnavigation.favorites.FavoritesViewModel
 import com.example.onlinestore.ui.bottomnavigation.main.MainViewModel
 import com.example.onlinestore.ui.bottomnavigation.profile.ProfileViewModel
 import com.example.onlinestore.ui.productsdetails.ProductDetailsVM
-import com.example.onlinestore.ui.productsdetails.RelatedProductVM
+import com.example.onlinestore.ui.relatedproductdetails.RelatedProductVM
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
@@ -20,7 +19,6 @@ import org.koin.dsl.module
 val viewModelModule: Module = module {
     viewModel { CatalogViewModel(get()) }
     viewModel { MainViewModel(get()) }
-    viewModel { FavoritesViewModel(get()) }
     viewModel { ProductDetailsVM(db = get()) }
     viewModel { CartViewModel(db = get()) }
     viewModel { RelatedProductVM(db = get()) }

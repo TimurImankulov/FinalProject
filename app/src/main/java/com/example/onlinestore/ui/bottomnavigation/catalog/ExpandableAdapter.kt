@@ -9,6 +9,8 @@ import android.widget.TextView
 import com.example.onlinestore.R
 import com.example.onlinestore.data.model.CatalogModel
 import com.example.onlinestore.data.model.ProductListModel
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.item_cart.view.*
 
 
 class ExpandableAdapter(private val listener: (list: List<ProductListModel>?) -> Unit) : BaseExpandableListAdapter() {
@@ -52,6 +54,7 @@ class ExpandableAdapter(private val listener: (list: List<ProductListModel>?) ->
         }
         view?.findViewById<TextView>(R.id.tv_Title)?.text = list[groupPosition].title
         view?.findViewById<ImageView>(R.id.ivGroupIndicator)?.isSelected = isExpanded
+
         return view
     }
 

@@ -43,4 +43,8 @@
     <string name="user_name">User name</string>
     <string name="personal_information">Personal Information</string>
     <string name="history_of_orders">History of orders</string>
+    <string name="online_store">Online Store</string>
+    <string name="catalog">Catalog</string>
+    <string name="search">Search</string>
+    <string name="best_sales">Best Sales</string>
 </resources>

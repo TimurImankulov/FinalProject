@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val navIds = listOf(
             R.navigation.main,
             R.navigation.catalog,
-            R.navigation.favorites,
             R.navigation.profile,
             R.navigation.cart,
         )

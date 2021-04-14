@@ -25,7 +25,7 @@
                 android:drawableStart="@drawable/ic_location"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/mark_pro_medium"
-                android:text="Zihuatanejo, Gro"
+                android:text="Bishkek"
                 android:textColor="@color/darkBlue"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"

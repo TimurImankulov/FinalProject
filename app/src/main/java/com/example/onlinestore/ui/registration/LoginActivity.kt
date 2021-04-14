@@ -13,6 +13,5 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         host = Navigation.findNavController(this, R.id.container)
-
     }
 }

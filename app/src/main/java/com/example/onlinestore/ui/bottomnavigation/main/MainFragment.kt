@@ -67,11 +67,6 @@ class MainFragment : BaseFragment() {
         vm.showData().observe(viewLifecycleOwner, Observer {
             productCategoryAdapter.submitList(it?.category?.product_category?.get(categoryPosition)?.items?.bestsales?.product_list)
         })
-
-        vm.showData().observe(viewLifecycleOwner, Observer {
-            binding.tvTitle.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_title
-            binding.tvDescriptions.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_description
-        })
     }
 
     private fun setupRecyclerView() {

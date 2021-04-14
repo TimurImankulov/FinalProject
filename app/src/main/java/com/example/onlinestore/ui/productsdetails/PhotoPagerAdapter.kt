@@ -34,7 +34,8 @@ class PhotoPagerAdapter(private val listener: (item: Images) -> Unit) : Recycler
 class PagerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: Images, listener: (item: Images) -> Unit) {
 
-        Picasso.get().load(item.image).into(itemView.iv_Product)
+        Picasso.get()
+            .load(item.image).into(itemView.iv_Product)
 
         itemView.card_viewpager.setOnClickListener {
             item.let { listener.invoke(it) }

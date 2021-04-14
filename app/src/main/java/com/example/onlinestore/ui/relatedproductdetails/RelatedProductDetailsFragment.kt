@@ -1,4 +1,4 @@
-package com.example.onlinestore.ui.productsdetails
+package com.example.onlinestore.ui.relatedproductdetails
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import com.example.onlinestore.data.common.BaseFragment
 import com.example.onlinestore.data.model.Images
 import com.example.onlinestore.data.model.Specification
 import com.example.onlinestore.databinding.FragmentRelatedProductDetailsBinding
+import com.example.onlinestore.ui.productsdetails.*
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.example.onlinestore.utils.ext.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -43,7 +44,7 @@ class RelatedProductDetailsFragment : BaseFragment() {
         ) else item?.specification
         specs?.let { specAdapter.update(it) }
         binding.tvProductName.text = item?.full_title
-        binding.tvPrice.text = item?.priceNew
+        binding.tvPrice.text = item?.price
         binding.tvOldPrice.text = item?.old_price?.strikeThroughSpan()
         binding.tvDescription.text = item?.description
     }

@@ -37,6 +37,8 @@ class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         Picasso.get()
             .load(item.image)
+            .placeholder(R.drawable.placeholder)
+            .error(R.drawable.placeholder)
             .into(itemView.iv_Product)
 
         itemView.hotsales_ProductCard.setOnClickListener {

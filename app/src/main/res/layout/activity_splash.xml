@@ -39,12 +39,12 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
         android:fontFamily="@font/mark_pro_regular"
-        android:text="Online Store"
+        android:text="@string/online_store"
         android:textColor="@color/white"
         android:textSize="@dimen/sp12"
-        android:layout_marginStart="@dimen/dp16"
-        app:layout_constraintTop_toBottomOf="@id/tv_Title"
-        app:layout_constraintStart_toStartOf="@id/guideLine" />
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tv_Title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

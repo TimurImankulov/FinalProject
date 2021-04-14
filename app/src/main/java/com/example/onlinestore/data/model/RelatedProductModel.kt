@@ -23,7 +23,7 @@ data class RelatedProductModel (
     @SerializedName("title") val title : String? = null,
     @SerializedName("full_title") val full_title : String? = null,
     @SerializedName("images") val images : List<Images>? = null,
-    @SerializedName("price") val priceNew : String? = null,
+    @SerializedName("price") val price : String? = null,
     val image : String? = null,
     @SerializedName("old_price") val old_price : String? = null,
     @SerializedName("favorite") val favorite : Boolean? = null,

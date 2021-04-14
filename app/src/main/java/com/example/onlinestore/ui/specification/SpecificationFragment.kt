@@ -1,4 +1,4 @@
-package com.example.onlinestore.ui.productsdetails
+package com.example.onlinestore.ui.specification
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
 import com.example.onlinestore.databinding.FragmentSpecificationBinding
+import com.example.onlinestore.ui.productsdetails.MultipleAdapter
 import com.example.onlinestore.utils.ext.viewBinding
 
 class SpecificationFragment : BaseFragment() {

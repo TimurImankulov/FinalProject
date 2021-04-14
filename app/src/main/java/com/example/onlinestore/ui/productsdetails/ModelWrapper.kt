@@ -16,7 +16,7 @@ object ModelWrapper {
             favorite = details?.favorite,
             description = details?.description,
             specification = details?.specification,
-          //  related_product = details?.related_product,
+            related_product = details?.related_product,
             rank = details?.rank,
             count = count
         )
@@ -29,7 +29,7 @@ object ModelWrapper {
             full_title = details?.full_title,
             images = details?.images,
             image = details?.image,
-            price = details?.priceNew,
+            price = details?.price,
             old_price = details?.old_price,
             favorite = details?.favorite,
             description = details?.description,

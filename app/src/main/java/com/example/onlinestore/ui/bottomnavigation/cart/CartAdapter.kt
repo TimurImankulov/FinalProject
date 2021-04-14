@@ -10,7 +10,6 @@ import com.example.onlinestore.data.model.CartProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsCart
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_cart.view.*
-import kotlinx.android.synthetic.main.item_favorite_product.view.iv_Product
 
 class CartAdapter(private val listener: (item: CartProductListModel) -> Unit) :
     ListAdapter<CartProductListModel, CartViewHolder>(

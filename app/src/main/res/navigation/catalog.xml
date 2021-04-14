@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/relatedProductDetailsFragment"
-        android:name="com.example.onlinestore.ui.productsdetails.RelatedProductDetailsFragment"
+        android:name="com.example.onlinestore.ui.relatedproductdetails.RelatedProductDetailsFragment"
         android:label="RelatedProductDetailsFragment" >
         <action
             android:id="@+id/action_relatedProductDetailsFragment_to_descriptionFragment"
@@ -38,11 +38,11 @@
     </fragment>
     <fragment
         android:id="@+id/descriptionFragment"
-        android:name="com.example.onlinestore.ui.productsdetails.DescriptionFragment"
+        android:name="com.example.onlinestore.ui.description.DescriptionFragment"
         android:label="DescriptionFragment" />
     <fragment
         android:id="@+id/specificationFragment"
-        android:name="com.example.onlinestore.ui.productsdetails.SpecificationFragment"
+        android:name="com.example.onlinestore.ui.specification.SpecificationFragment"
         android:label="SpecificationFragment" />
     <fragment
         android:id="@+id/categoryFragment"
