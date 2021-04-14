@@ -10,7 +10,7 @@ import com.example.onlinestore.data.model.ItemFavoritesModel
 import com.example.onlinestore.data.model.OrderProductListModel
 import com.example.onlinestore.data.model.ProductListModel
 
-@Database(entities = [ProductListModel::class, ItemFavoritesModel::class, CartProductListModel::class, OrderProductListModel::class], version = 1)
+@Database(entities = [ProductListModel::class, ItemFavoritesModel::class, CartProductListModel::class, OrderProductListModel::class], version = 2)
 @TypeConverters(value = [TypeConverter::class])
 abstract class OnlineStoreDataBase : RoomDatabase() {
     abstract fun getDao(): OnlineStoreDao
@@ -21,6 +21,7 @@ abstract class OnlineStoreDataBase : RoomDatabase() {
         fun getInstanceDB(context: Context): OnlineStoreDataBase {
             return Room.databaseBuilder(context, OnlineStoreDataBase::class.java, "myDb")
                 .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .build()
         }
     }
