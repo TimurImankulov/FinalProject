@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.common.FavoriteViewModel
 import com.example.onlinestore.data.test.ProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsBestSales
 import com.example.onlinestore.utils.ext.strikeThroughSpan
@@ -14,13 +13,12 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_product.view.*
 
 class ProductCategoryAdapter(
-    private val vm: FavoriteViewModel?=null,
     private val listener: (item: ProductListModel) -> Unit
 ) : ListAdapter<ProductListModel, ProductCategoryViewHolder>(DiffUtilsBestSales.diffUtilItems) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCategoryViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_product, parent, false)
-        return ProductCategoryViewHolder(view, vm)
+        return ProductCategoryViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ProductCategoryViewHolder, position: Int) {
@@ -28,7 +26,7 @@ class ProductCategoryAdapter(
     }
 }
 
-class ProductCategoryViewHolder(view: View, private val vm: FavoriteViewModel?) : RecyclerView.ViewHolder(view) {
+class ProductCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(
         item: ProductListModel,
         listener: (item: ProductListModel) -> Unit
@@ -45,10 +43,6 @@ class ProductCategoryViewHolder(view: View, private val vm: FavoriteViewModel?) 
             listener.invoke(item)
         }
 
-        itemView.ch_Favorites.setOnClickListener {
-            item.favorite =!item.favorite!!
-            vm?.update(item)
-        }
 //
 //        itemView.ch_Favorites.isChecked = item.favorite!!
 //    }

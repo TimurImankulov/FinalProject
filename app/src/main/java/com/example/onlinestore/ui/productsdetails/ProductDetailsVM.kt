@@ -1,21 +1,21 @@
-package com.example.onlinestore.data.common
+package com.example.onlinestore.ui.productsdetails
 
-import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.onlinestore.data.local.OnlineStoreDataBase
+import com.example.onlinestore.data.test.CartProductListModel
 import com.example.onlinestore.data.test.ProductListModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-abstract class FavoriteViewModel(private val db:OnlineStoreDataBase):ViewModel() {
+class ProductDetailsVM(private val db: OnlineStoreDataBase) : ViewModel() {
 
-    fun update(item: ProductListModel) {
+    fun addToCart(details: ProductListModel?) {
         viewModelScope.launch(Dispatchers.Default) {
             runCatching {
-                db.getDao().insert(item)
+                db.getCart().insert(ModelWrapper.detailsToCart(details))
             }.onFailure {
-                Log.d("commands", it.localizedMessage ?: "no error message")
             }
         }
     }

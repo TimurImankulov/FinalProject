@@ -23,14 +23,6 @@ class OrderFragment:BaseFragment() {
 
     private fun setupRecyclerView() {
         binding.recyclerViewOrders.adapter = ordersAdapter
-        ordersAdapter.submitList(generateData())
-    }
-
-
-    private fun generateData(): ArrayList<HistoryOrdersModel> {
-        val list = arrayListOf<HistoryOrdersModel>()
-
-        list.add(HistoryOrdersModel("№0001", "Done", "Mart27", "$1500", image = R.drawable.samsung, title = "Samsung Galaxy s20 Ultra"))
-        return list
+      //  ordersAdapter.submitList(args.details)
     }
 }

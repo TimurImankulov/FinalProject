@@ -18,7 +18,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 @Parcelize
 data class CatalogModel (
 
-	@SerializedName("image") val image : Int? = null,
+	@SerializedName("image") val image : String? = null,
 	@SerializedName("title") val title : String? = null,
 	@SerializedName("catalog_items") val catalog_items : List<CatalogItemsModel>? = null
 ):Parcelable

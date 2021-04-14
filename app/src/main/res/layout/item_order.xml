@@ -14,14 +14,14 @@
         android:layout_marginStart="@dimen/dp20"
         android:layout_marginTop="@dimen/dp8"
         android:fontFamily="@font/mark_pro_medium"
-        android:text="0001"
+        android:text="Order Number"
         android:textColor="@color/black"
         android:textSize="@dimen/sp12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_Data"
+        android:id="@+id/tv_OrderNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp8"
@@ -35,31 +35,59 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_Status"
+        android:id="@+id/tv_Data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp20"
         android:layout_marginTop="@dimen/dp8"
         android:fontFamily="@font/mark_pro_regular"
-        android:text="Done"
+        android:text="Data"
         android:textColor="@color/black"
         android:textSize="@dimen/sp12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Number" />
 
     <TextView
-        android:id="@+id/tv_Price"
+        android:id="@+id/tv_OrderData"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp8"
         android:layout_marginEnd="@dimen/dp20"
         android:fontFamily="@font/mark_pro_medium"
-        android:text="$1500"
+        android:text="10000"
         android:textColor="@color/darkBlue"
         android:textSize="@dimen/sp12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tv_OrderNumber" />
+
+    <TextView
+        android:id="@+id/tv_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/mark_pro_regular"
+        android:text="TotalSum"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Data" />
+
+    <TextView
+        android:id="@+id/tv_TotalSum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp20"
+        android:fontFamily="@font/mark_pro_medium"
+        android:text="data"
+        android:textColor="@color/darkBlue"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideLine"
+        app:layout_constraintTop_toBottomOf="@id/tv_OrderData" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLine"

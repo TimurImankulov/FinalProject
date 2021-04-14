@@ -1,36 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/darkBlue"
+    android:background="@android:color/transparent"
     android:padding="@dimen/dp8">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_Product"
-        android:layout_width="@dimen/dp88"
-        android:layout_height="@dimen/dp88"
-        android:layout_marginStart="@dimen/dp20"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toStartOf="@id/tv_ProductName"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product_Card"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:layout_marginStart="@dimen/dp16"
+        app:cardCornerRadius="@dimen/dp10"
+        app:cardElevation="@dimen/dp0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_Product"
+                android:layout_width="@dimen/dp88"
+                android:layout_height="@dimen/dp88"
+                android:padding="@dimen/dp8"
+                android:scaleType="centerCrop"
+                android:src="@drawable/samsung"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tv_ProductName"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp16"
-        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp20"
         android:fontFamily="@font/mark_pro_medium"
         android:gravity="left"
         android:maxLines="2"
         android:text="Galaxy Note 20 \nUltra"
         android:textColor="@color/white"
         android:textSize="@dimen/sp20"
-        app:layout_constraintEnd_toStartOf="@id/constraintQuantity"
-        app:layout_constraintStart_toEndOf="@id/iv_Product"
-        app:layout_constraintTop_toTopOf="@id/iv_Product" />
+        app:layout_constraintEnd_toStartOf="@id/btn_Delete"
+        app:layout_constraintStart_toEndOf="@id/product_Card"
+        app:layout_constraintTop_toTopOf="@id/product_Card" />
 
     <TextView
         android:id="@+id/tv_ProductPrice"
@@ -44,60 +65,60 @@
         android:text="$3000"
         android:textColor="@color/orange"
         android:textSize="@dimen/sp20"
-        app:layout_constraintBottom_toBottomOf="@id/iv_Product"
-        app:layout_constraintEnd_toStartOf="@id/constraintQuantity"
-        app:layout_constraintStart_toEndOf="@id/iv_Product" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintQuantity"
-        android:layout_width="@dimen/dp26"
-        android:layout_height="@dimen/dp68"
-        android:layout_marginEnd="@dimen/dp8"
-        android:background="@drawable/bg_button_quantity"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/product_Card"
         app:layout_constraintEnd_toStartOf="@id/btn_Delete"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toEndOf="@id/product_Card" />
 
-        <ImageView
-            android:id="@+id/btn_Minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
-            android:src="@drawable/ic_minus"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/constraintQuantity"-->
+    <!--        android:layout_width="@dimen/dp26"-->
+    <!--        android:layout_height="@dimen/dp68"-->
+    <!--        android:layout_marginEnd="@dimen/dp8"-->
+    <!--        android:background="@drawable/bg_button_quantity"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/btn_Delete"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
-        <TextView
-            android:id="@+id/tv_Quantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mark_pro_medium"
-            android:text="2"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp20"
-            app:layout_constraintBottom_toTopOf="@id/btn_Plus"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_Minus" />
+    <!--        <ImageView-->
+    <!--            android:id="@+id/btn_Minus"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="@dimen/dp10"-->
+    <!--            android:src="@drawable/ic_minus"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <ImageView
-            android:id="@+id/btn_Plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp10"
-            android:src="@drawable/ic_plus"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_Quantity"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/mark_pro_medium"-->
+    <!--            android:text="2"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/sp20"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/btn_Plus"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/btn_Minus" />-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--        <ImageView-->
+    <!--            android:id="@+id/btn_Plus"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="@dimen/dp10"-->
+    <!--            android:src="@drawable/ic_plus"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <ImageView
         android:id="@+id/btn_Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dp4"
+        android:layout_marginEnd="@dimen/dp16"
         android:src="@drawable/ic_basket"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

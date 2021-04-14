@@ -28,7 +28,7 @@ class MainFragment : BaseFragment() {
         }
     }
     private val productCategoryAdapter by lazy {
-        ProductCategoryAdapter(vm) {
+        ProductCategoryAdapter() {
               navigateToProductDetails(it)
         }
     }
@@ -72,7 +72,6 @@ class MainFragment : BaseFragment() {
             binding.tvTitle.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_title
             binding.tvDescriptions.text = it?.category?.product_category?.get(categoryPosition)?.bestsales_description
         })
-
     }
 
     private fun setupRecyclerView() {

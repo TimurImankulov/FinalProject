@@ -6,243 +6,262 @@
     android:layout_height="match_parent"
     android:background="@color/grey">
 
-    <TextView
-        android:id="@+id/tv_Cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp20"
-        android:layout_marginTop="@dimen/dp16"
-        android:fontFamily="@font/mark_pro_bold"
-        android:text="My Cart"
-        android:textColor="@color/darkBlue"
-        android:textSize="@dimen/sp25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_round_frame_cart"
-        android:paddingBottom="@dimen/dp20"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Cart">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_Cart"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content">
 
-      <TextView
-          android:id="@+id/tv_DeliveryTitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="20dp"
-          android:fontFamily="@font/mark_pro_medium"
-          android:text="Way of Delivery"
-          android:textColor="@color/white"
-          android:textSize="@dimen/sp16"
-          android:layout_marginTop="@dimen/dp16"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/recyclerView_Cart"/>
-
-        <RadioGroup
-            android:id="@+id/deliveryRadioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp20"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_DeliveryTitle">
-
-            <RadioButton
-                android:id="@+id/rb_Pickup"
+            <TextView
+                android:id="@+id/tv_Cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/mark_pro_regular"
-                android:text="Pickup"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp15" />
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp16"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="@string/my_cart"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/sp25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/rb_Delivery"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/mark_pro_regular"
-                android:text="Delivery"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp15" />
-        </RadioGroup>
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/bg_round_frame_cart"
+                android:paddingBottom="@dimen/dp20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Cart">
 
-        <EditText
-            android:id="@+id/et_DeliveryAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Add address"
-            android:textSize="12sp"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/deliveryRadioGroup"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/dp20"
-            android:layout_marginTop="@dimen/dp10"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_Cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp20"
-            android:layout_marginTop="@dimen/dp20"
-            android:fontFamily="@font/mark_pro_medium"
-            android:text="Date and time"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_DeliveryAddress" />
+                <TextView
+                    android:id="@+id/tv_DeliveryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="@string/way_of_delivery"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerView_Cart" />
 
-        <EditText
-            android:id="@+id/et_DataOfDelivery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Add data"
-            android:textSize="12sp"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
-            android:layout_marginStart="@dimen/dp20"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_Date"/>
-        <TextView
-            android:id="@+id/tv_Payment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp20"
-            android:layout_marginTop="@dimen/dp20"
-            android:fontFamily="@font/mark_pro_medium"
-            android:text="Payment"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp16"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_DataOfDelivery" />
+                <RadioGroup
+                    android:id="@+id/deliveryRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_DeliveryTitle">
 
-        <RadioGroup
-            android:id="@+id/paymentRadioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp20"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_Payment">
+                    <RadioButton
+                        android:id="@+id/rb_Pickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/mark_pro_regular"
+                        android:text="@string/pickup"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15" />
 
-            <RadioButton
-                android:id="@+id/rb_CreditCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mark_pro_regular"
-                android:text="Credit or debit card"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp15" />
+                    <RadioButton
+                        android:id="@+id/rb_Delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mark_pro_regular"
+                        android:text="@string/delivery"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15" />
+                </RadioGroup>
 
-            <RadioButton
-                android:id="@+id/rb_CashPayment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mark_pro_regular"
-                android:text="Cash payment"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp15" />
-        </RadioGroup>
+                <EditText
+                    android:id="@+id/et_DeliveryAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:hint="@string/add_address"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/deliveryRadioGroup" />
 
-        <View
-            android:id="@+id/firstGuideLine"
-            android:layout_marginTop="@dimen/dp16"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp2"
-            android:layout_marginLeft="@dimen/dp4"
-            android:layout_marginRight="@dimen/dp4"
-            android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/paymentRadioGroup" />
+                <TextView
+                    android:id="@+id/tv_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="@string/date_and_time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_DeliveryAddress" />
 
-        <TextView
-            android:id="@+id/tv_Total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp50"
-            android:layout_marginTop="@dimen/dp16"
-            android:fontFamily="@font/mark_pro_regular"
-            android:text="Total"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+                <EditText
+                    android:id="@+id/et_DataOfDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:hint="@string/add_data"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Date" />
 
-        <TextView
-            android:id="@+id/tv_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16"
-            android:layout_marginRight="@dimen/dp35"
-            android:fontFamily="@font/mark_pro_bold"
-            android:text="6,000 us"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+                <TextView
+                    android:id="@+id/tv_Payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/mark_pro_medium"
+                    android:text="@string/payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_DataOfDelivery" />
 
-        <TextView
-            android:id="@+id/tv_Delivery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp50"
-            android:layout_marginTop="@dimen/dp16"
-            android:fontFamily="@font/mark_pro_regular"
-            android:text="Delivery"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_Total" />
+                <RadioGroup
+                    android:id="@+id/paymentRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Payment">
 
-        <TextView
-            android:id="@+id/tv_DeliveryDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16"
-            android:fontFamily="@font/mark_pro_bold"
-            android:text="Free"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp15"
-            app:layout_constraintStart_toStartOf="@id/tv_Price"
-            app:layout_constraintTop_toBottomOf="@id/tv_Price" />
+                    <RadioButton
+                        android:id="@+id/rb_CreditCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mark_pro_regular"
+                        android:text="@string/credit_or_debit_card"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15" />
 
-        <View
-            android:id="@+id/secondGuideLine"
-            android:layout_marginTop="@dimen/dp8"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp1"
-            android:layout_marginLeft="@dimen/dp4"
-            android:layout_marginRight="@dimen/dp4"
-            android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/tv_DeliveryDesc" />
+                    <RadioButton
+                        android:id="@+id/rb_CashPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/mark_pro_regular"
+                        android:text="@string/cash_payment"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15" />
+                </RadioGroup>
 
-        <Button
-            android:id="@+id/btn_Checkout"
-            android:layout_width="@dimen/dp326"
-            android:layout_height="@dimen/dp54"
-            android:layout_marginTop="@dimen/dp30"
-            android:layout_marginBottom="@dimen/dp20"
-            android:background="@drawable/bg_button_cart"
-            android:fontFamily="@font/mark_pro_bold"
-            android:letterSpacing="0.02"
-            android:text="Checkout"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp20"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/secondGuideLine" />
+                <View
+                    android:id="@+id/firstGuideLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp2"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/paymentRadioGroup" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="@string/total_sum"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+
+                <TextView
+                    android:id="@+id/tv_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp35"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:text="6,000 us"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/firstGuideLine" />
+
+                <TextView
+                    android:id="@+id/tv_Delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:fontFamily="@font/mark_pro_regular"
+                    android:text="@string/delivery"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Total" />
+
+                <TextView
+                    android:id="@+id/tv_DeliveryDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:text="@string/free"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    app:layout_constraintStart_toStartOf="@id/tv_Price"
+                    app:layout_constraintTop_toBottomOf="@id/tv_Price" />
+
+                <View
+                    android:id="@+id/secondGuideLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginLeft="@dimen/dp4"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:layout_marginRight="@dimen/dp4"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_DeliveryDesc" />
+
+                <Button
+                    android:id="@+id/btn_Checkout"
+                    android:layout_width="@dimen/dp326"
+                    android:layout_height="@dimen/dp54"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/bg_button_cart"
+                    android:fontFamily="@font/mark_pro_bold"
+                    android:letterSpacing="0.02"
+                    android:text="@string/checkout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/secondGuideLine" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

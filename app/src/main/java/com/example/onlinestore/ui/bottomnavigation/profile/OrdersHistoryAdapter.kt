@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
-import com.example.onlinestore.data.model.HistoryOrdersModel
+import com.example.onlinestore.data.test.OrderProductListModel
 import com.example.onlinestore.utils.diffUtils.DiffUtilsOrder
 import kotlinx.android.synthetic.main.item_order.view.*
-import kotlinx.android.synthetic.main.item_order.view.tv_Price
+import kotlin.random.Random
 
-class OrdersHistoryAdapter(private val listener: () -> Unit) : ListAdapter<HistoryOrdersModel, HistoryOrdersViewHolder>(
+class OrdersHistoryAdapter(private val listener: (item:OrderProductListModel) -> Unit) : ListAdapter<OrderProductListModel, HistoryOrdersViewHolder>(
     DiffUtilsOrder.diffUtilsOrder) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryOrdersViewHolder {
@@ -26,14 +26,13 @@ class OrdersHistoryAdapter(private val listener: () -> Unit) : ListAdapter<Histo
 }
 
 class HistoryOrdersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    fun bind(item: HistoryOrdersModel, listener: () -> Unit) {
-        itemView.tv_Number.text = item.number
-        itemView.tv_Data.text = item.data
-        itemView.tv_Status.text = item.status
-        itemView.tv_Price.text = item.price
+    fun bind(item: OrderProductListModel, listener: (item: OrderProductListModel) -> Unit) {
+        itemView.tv_OrderNumber.text = Random.nextInt(1000,100000).toString()
+        itemView.tv_OrderData.text = item.data
+        itemView.tv_TotalSum.text = item.totalSum.toString()
 
         itemView.item_order.setOnClickListener {
-            listener.invoke()
+            listener.invoke(item)
         }
     }
 }

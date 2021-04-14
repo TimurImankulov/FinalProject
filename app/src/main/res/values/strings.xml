@@ -24,4 +24,23 @@
     <string name="cvv">*CVV</string>
     <string name="add_card">Add Card</string>
     <string name="date">%1d/%2d/%3d</string>
+    <string name="my_cart">My Cart</string>
+    <string name="way_of_delivery">Way of Delivery</string>
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="add_address">Add address</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="add_data">Add data</string>
+    <string name="payment">Payment</string>
+    <string name="credit_or_debit_card">Credit or debit card</string>
+    <string name="cash_payment">Cash payment</string>
+    <string name="total_sum">Total Sum</string>
+    <string name="free">Free</string>
+    <string name="checkout">Checkout</string>
+    <string name="success">Success!</string>
+    <string name="your_order_is_completed">Your order is completed</string>
+    <string name="ok">OK</string>
+    <string name="user_name">User name</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="history_of_orders">History of orders</string>
 </resources>

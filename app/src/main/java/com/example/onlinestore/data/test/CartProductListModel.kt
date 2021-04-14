@@ -17,20 +17,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
+
 @Entity
 @Parcelize
-data class ProductListModel (
+data class CartProductListModel(
     @PrimaryKey
-    @SerializedName("id") val id : Int? = null,
-    @SerializedName("title") val title : String? = null,
-    @SerializedName("full_title") val full_title : String? = null,
-    @SerializedName("images") val images : List<Images>? = null,
-    @SerializedName("image") val image : String? = null,
-    @SerializedName("price") val price : String? = null,
-    @SerializedName("old_price") val old_price : String? = null,
-    @SerializedName("favorite") var favorite : Boolean? = null,
-    @SerializedName("rank") val rank : Int? = null,
-    @SerializedName("description") val description : String? = null,
-    @SerializedName("specification") val specification : List<Specification>? = null,
-    @SerializedName("related_product") val related_product : List<RelatedProductModel>? = null
-):Parcelable
+    @SerializedName("id") val id: Int? = null,
+    @SerializedName("title") val title: String? = null,
+    @SerializedName("full_title") val full_title: String? = null,
+    @SerializedName("images") val images: List<Images>? = null,
+    @SerializedName("image") val image: String? = null,
+    @SerializedName("price") val price: String? = null,
+    @SerializedName("old_price") val old_price: String? = null,
+    @SerializedName("favorite") var favorite: Boolean? = null,
+    @SerializedName("rank") val rank: Int? = null,
+    var count: Int = 0,
+    @SerializedName("description") val description: String? = null,
+    @SerializedName("specification") val specification: List<Specification>? = null,
+    @SerializedName("related_product") val related_product: List<RelatedProductModel>? = null
+) : Parcelable

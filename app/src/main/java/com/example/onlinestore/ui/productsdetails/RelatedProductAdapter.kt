@@ -33,12 +33,12 @@ class RelatedProductAdapter(private val listener: (item: RelatedProductModel) ->
 class RelatedProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: RelatedProductModel, listener: (item: RelatedProductModel) -> Unit) {
         itemView.tv_Title.text = item.title
-        itemView.tv_Price.text = item.price
+        itemView.tv_Price.text = item.priceNew
         itemView.tv_OldPrice.text = item.old_price?.strikeThroughSpan()
 
-        Picasso.get()
-            .load(item.image)
-            .into(itemView.iv_Product)
+//        Picasso.get()
+//            .load(item.image)
+//            .into(itemView.iv_Product)
 
         itemView.hotsales_ProductCard.setOnClickListener {
               listener.invoke(item)

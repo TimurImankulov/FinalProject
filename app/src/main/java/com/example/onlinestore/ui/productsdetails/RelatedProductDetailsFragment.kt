@@ -13,11 +13,13 @@ import com.example.onlinestore.data.test.Specification
 import com.example.onlinestore.databinding.FragmentRelatedProductDetailsBinding
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.example.onlinestore.utils.ext.viewBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RelatedProductDetailsFragment:BaseFragment() {
     override fun resID() = R.layout.fragment_related_product_details
     private val binding by viewBinding(FragmentRelatedProductDetailsBinding::bind)
     private val args: RelatedProductDetailsFragmentArgs by navArgs()
+    private val vm by viewModel<RelatedProductVM>()
 
     private val slideAdapter by lazy { PhotoPagerAdapter(){
         navigateToPhoto(it)
@@ -38,7 +40,7 @@ class RelatedProductDetailsFragment:BaseFragment() {
         val specs = if(item?.specification?.size ?:0 > 3 )  item?.specification?.subList(0,3) else item?.specification
         specs?.let { specAdapter.update(it) }
         binding.tvProductName.text = item?.full_title
-        binding.tvPrice.text = item?.price
+        binding.tvPrice.text = item?.priceNew
         binding.tvOldPrice.text = item?.old_price?.strikeThroughSpan()
         binding.tvDescription.text = item?.description
     }
@@ -54,6 +56,9 @@ class RelatedProductDetailsFragment:BaseFragment() {
 
         binding.btnBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        binding.btnAddToCart.setOnClickListener {
+            vm.addToCart(args.details)
         }
     }
 
@@ -76,7 +81,7 @@ class RelatedProductDetailsFragment:BaseFragment() {
     }
 
     private fun navigateToPhoto(data: Images) {
-        val destination = ProductDetailsFragmentDirections.actionProductDetailsFragmentToPhotoDetailsFragment(data)
+        val destination = RelatedProductDetailsFragmentDirections.actionRelatedProductDetailsFragmentToPhotoDetailsFragment(data)
         findNavController().navigate(destination)
     }
 

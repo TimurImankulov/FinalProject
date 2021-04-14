@@ -24,7 +24,7 @@
                 android:id="@+id/slide_ViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp350"
-                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp70"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

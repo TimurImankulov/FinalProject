@@ -20,9 +20,9 @@
             <ImageView
                 android:id="@+id/iv_Card"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/image"
+                android:layout_height="@dimen/dp240"
+                android:scaleType="center"
+                android:src="@drawable/placeholder_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="@dimen/dp200"
                 android:background="@drawable/bg_round_frame"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -44,7 +44,7 @@
                     android:layout_marginTop="@dimen/dp24"
                     android:fontFamily="@font/mark_pro_medium"
                     android:paddingEnd="@dimen/dp20"
-                    android:text="Personal Information"
+                    android:text="@string/personal_information"
                     android:textColor="@color/darkBlue"
                     android:textSize="@dimen/sp18"
                     app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +57,9 @@
                     android:layout_marginStart="@dimen/dp20"
                     android:layout_marginTop="@dimen/dp10"
                     android:fontFamily="@font/mark_pro_regular"
-                    android:text="User name"
+                    android:text="@string/user_name"
                     android:textColor="@color/darkBlue"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/sp12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_PersonalInfo" />
 
@@ -82,9 +82,9 @@
                     android:layout_marginStart="@dimen/dp20"
                     android:layout_marginTop="@dimen/dp20"
                     android:fontFamily="@font/mark_pro_regular"
-                    android:text="E-mail"
+                    android:text="@string/e_mail"
                     android:textColor="@color/darkBlue"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/sp12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_UserName" />
 
@@ -107,7 +107,7 @@
                     android:layout_marginStart="@dimen/dp20"
                     android:layout_marginTop="@dimen/dp20"
                     android:fontFamily="@font/mark_pro_regular"
-                    android:text="Phone number"
+                    android:text="@string/phone_number"
                     android:textColor="@color/darkBlue"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +133,7 @@
                     android:layout_marginTop="@dimen/dp24"
                     android:fontFamily="@font/mark_pro_medium"
                     android:paddingEnd="@dimen/dp20"
-                    android:text="History of orders"
+                    android:text="@string/history_of_orders"
                     android:textColor="@color/darkBlue"
                     android:textSize="@dimen/sp18"
                     app:layout_constraintStart_toStartOf="parent"

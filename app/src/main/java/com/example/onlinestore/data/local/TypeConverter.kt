@@ -1,6 +1,7 @@
 package com.example.onlinestore.data.local
 
 import androidx.room.TypeConverter
+import com.example.onlinestore.data.test.CartProductListModel
 import com.example.onlinestore.data.test.Images
 import com.example.onlinestore.data.test.RelatedProductModel
 import com.example.onlinestore.data.test.Specification
@@ -49,6 +50,20 @@ object TypeConverter {
     fun relatedProductToObject(text: String?): List<RelatedProductModel>? {
         if (text == null) return mutableListOf()
         val typeToken = object : TypeToken<List<RelatedProductModel>>() {}.type
+        return Gson().fromJson(text, typeToken)
+    }
+
+    @JvmStatic
+    @TypeConverter
+    fun cartProductToString(model: List<CartProductListModel>?): String? {
+        return Gson().toJson(model)
+    }
+
+    @JvmStatic
+    @TypeConverter
+    fun cartProductToObject(text: String?): List<CartProductListModel>? {
+        if (text == null) return mutableListOf()
+        val typeToken = object : TypeToken<List<CartProductListModel>>() {}.type
         return Gson().fromJson(text, typeToken)
     }
 }
