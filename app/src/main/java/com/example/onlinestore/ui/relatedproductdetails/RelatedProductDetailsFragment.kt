@@ -6,9 +6,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.onlinestore.R
 import com.example.onlinestore.data.common.BaseFragment
-import com.example.onlinestore.data.model.Images
-import com.example.onlinestore.data.model.Specification
+import com.example.onlinestore.data.model.ImagesModel
+import com.example.onlinestore.data.model.SpecificationsModels
 import com.example.onlinestore.databinding.FragmentRelatedProductDetailsBinding
+import com.example.onlinestore.ui.photodetails.PhotoPagerAdapter
 import com.example.onlinestore.ui.productsdetails.*
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.example.onlinestore.utils.ext.viewBinding
@@ -79,7 +80,7 @@ class RelatedProductDetailsFragment : BaseFragment() {
         findNavController().navigate(destination)
     }
 
-    private fun navigateToDetails(data: List<Specification>?) {
+    private fun navigateToDetails(data: List<SpecificationsModels>?) {
         val destination =
             RelatedProductDetailsFragmentDirections.actionRelatedProductDetailsFragmentToSpecificationFragment(
                 data?.toTypedArray()
@@ -87,7 +88,7 @@ class RelatedProductDetailsFragment : BaseFragment() {
         findNavController().navigate(destination)
     }
 
-    private fun navigateToPhoto(data: Images) {
+    private fun navigateToPhoto(data: ImagesModel) {
         val destination =
             RelatedProductDetailsFragmentDirections.actionRelatedProductDetailsFragmentToPhotoDetailsFragment(
                 data

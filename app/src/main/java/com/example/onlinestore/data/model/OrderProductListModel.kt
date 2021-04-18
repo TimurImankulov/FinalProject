@@ -38,7 +38,7 @@ data class OrderProductListModel(
     var totalSum: Int? = null,
     var count: Int = 0,
     val description: String? = null,
-    val specification: List<Specification>? = null,
+    val specification: List<SpecificationsModels>? = null,
     var product: List<CartProductListModel>? = null,
     val related_product: List<RelatedProductModel>? = null
 ) : Parcelable

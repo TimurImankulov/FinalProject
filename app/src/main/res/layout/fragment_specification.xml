@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp20"
         android:fontFamily="@font/mark_pro_medium"
-        android:text="Description"
+        android:text="@string/specifications"
         android:textColor="@color/darkBlue"
         android:textSize="@dimen/sp16"
         app:layout_constraintEnd_toEndOf="parent"

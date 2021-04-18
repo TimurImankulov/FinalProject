@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
 import com.example.onlinestore.data.model.ProductListModel
-import com.example.onlinestore.utils.diffUtils.DiffUtilsBestSales
+import com.example.onlinestore.utils.diffUtils.DiffUtilsProduct
 import com.example.onlinestore.utils.ext.strikeThroughSpan
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_product.view.*
 
 class ProductCategoryAdapter(
     private val listener: (item: ProductListModel) -> Unit
-) : ListAdapter<ProductListModel, ProductCategoryViewHolder>(DiffUtilsBestSales.diffUtilItems) {
+) : ListAdapter<ProductListModel, ProductCategoryViewHolder>(DiffUtilsProduct.diffUtilItems) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductCategoryViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_product, parent, false)

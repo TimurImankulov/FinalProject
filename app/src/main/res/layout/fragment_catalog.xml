@@ -43,7 +43,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dp20"
         android:layout_marginBottom="@dimen/dp20"
-        android:dividerHeight="1dp"
+        android:dividerHeight="@dimen/dp1"
         android:groupIndicator="@null"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

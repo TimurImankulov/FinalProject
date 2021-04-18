@@ -1,12 +1,12 @@
 package com.example.onlinestore.utils.diffUtils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.onlinestore.data.model.RelatedProductModel
+import com.example.onlinestore.data.model.ProductListModel
 
-object DiffUtilsRelatedProduct {
+object DiffUtilsProduct {
 
-    val diffUtilItems = object : DiffUtil.ItemCallback<RelatedProductModel>() {
-        override fun areItemsTheSame(oldItem: RelatedProductModel, newItem: RelatedProductModel): Boolean {
+    val diffUtilItems = object : DiffUtil.ItemCallback<ProductListModel>() {
+        override fun areItemsTheSame(oldItem: ProductListModel, newItem: ProductListModel): Boolean {
             return oldItem.id == newItem.id
                     && oldItem.title == newItem.title
                     && oldItem.full_title == newItem.full_title
@@ -15,14 +15,13 @@ object DiffUtilsRelatedProduct {
                     && oldItem.price == newItem.price
                     && oldItem.old_price == newItem.old_price
                     && oldItem.favorite == newItem.favorite
-                    && oldItem.rank == newItem.rank
                     && oldItem.description == newItem.description
                     && oldItem.specification == newItem.specification
+                    && oldItem.related_product == newItem.related_product
         }
 
-        override fun areContentsTheSame(oldItem: RelatedProductModel, newItem: RelatedProductModel): Boolean {
+        override fun areContentsTheSame(oldItem: ProductListModel, newItem: ProductListModel): Boolean {
             return oldItem == newItem
         }
     }
 }
-

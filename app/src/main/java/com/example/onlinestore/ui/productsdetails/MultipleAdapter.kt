@@ -4,16 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.data.model.ListSpecificationsModel
-import com.example.onlinestore.data.model.Specification
+import com.example.onlinestore.data.model.SpecificationsModels
 import com.example.onlinestore.databinding.ItemHeaderBinding
 import com.example.onlinestore.databinding.ItemSpecificationBinding
 
-
 class MultipleAdapter : RecyclerView.Adapter<HeaderViewHolder>() {
 
-    private val list = arrayListOf<Specification>()
+    private val list = arrayListOf<SpecificationsModels>()
 
-    fun update(list: List<Specification>) {
+    fun update(list: List<SpecificationsModels>) {
         this.list.clear()
         this.list.addAll(list)
         notifyDataSetChanged()
@@ -40,7 +39,7 @@ class HeaderViewHolder(private val binding: ItemHeaderBinding) : RecyclerView.Vi
         binding.recyclerViewProductSpecification.adapter = adapter
     }
 
-    fun bind(response: Specification) {
+    fun bind(response: SpecificationsModels) {
         binding.tvHeader.text = response.header
         adapter.update(response.list_specification)
     }

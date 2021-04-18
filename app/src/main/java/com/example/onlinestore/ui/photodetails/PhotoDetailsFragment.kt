@@ -1,4 +1,4 @@
-package com.example.onlinestore.ui.productsdetails
+package com.example.onlinestore.ui.photodetails
 
 import android.os.Bundle
 import android.view.View

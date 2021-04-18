@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/grey"
-    android:padding="16dp">
+    android:padding="@dimen/dp16">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/expandable_ProductCard"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:layout_width="@dimen/dp46"
+        android:layout_height="@dimen/dp46"
         app:cardCornerRadius="@dimen/dp12"
         app:cardElevation="@dimen/dp0"
         app:layout_constraintStart_toStartOf="parent"

@@ -19,15 +19,15 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 @Parcelize
 data class RelatedProductModel (
     @PrimaryKey
-   // val id:Int? = null,
+    val id:Int? = null,
     @SerializedName("title") val title : String? = null,
     @SerializedName("full_title") val full_title : String? = null,
-    @SerializedName("images") val images : List<Images>? = null,
+    @SerializedName("images") val images : List<ImagesModel>? = null,
     @SerializedName("price") val price : String? = null,
     val image : String? = null,
     @SerializedName("old_price") val old_price : String? = null,
     @SerializedName("favorite") val favorite : Boolean? = null,
     @SerializedName("rank") val rank : Int? = null,
     @SerializedName("description") val description : String? = null,
-    @SerializedName("specification") val specification : List<Specification>? = null
+    @SerializedName("specification") val specification : List<SpecificationsModels>? = null
 ):Parcelable

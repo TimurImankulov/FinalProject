@@ -2,9 +2,9 @@ package com.example.onlinestore.data.local
 
 import androidx.room.TypeConverter
 import com.example.onlinestore.data.model.CartProductListModel
-import com.example.onlinestore.data.model.Images
+import com.example.onlinestore.data.model.ImagesModel
 import com.example.onlinestore.data.model.RelatedProductModel
-import com.example.onlinestore.data.model.Specification
+import com.example.onlinestore.data.model.SpecificationsModels
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -13,29 +13,29 @@ object TypeConverter {
 
     @JvmStatic
     @TypeConverter
-    fun imagesToString(model: List<Images>?): String? {
+    fun imagesToString(model: List<ImagesModel>?): String? {
         return Gson().toJson(model)
     }
 
     @JvmStatic
     @TypeConverter
-    fun imagesToObject(text: String?): List<Images>? {
+    fun imagesToObject(text: String?): List<ImagesModel>? {
         if (text == null) return mutableListOf()
-        val typeToken = object : TypeToken<List<Images>>() {}.type
+        val typeToken = object : TypeToken<List<ImagesModel>>() {}.type
         return Gson().fromJson(text, typeToken)
     }
 
     @JvmStatic
     @TypeConverter
-    fun specificationToString(model: List<Specification>?): String? {
+    fun specificationToString(model: List<SpecificationsModels>?): String? {
         return Gson().toJson(model)
     }
 
     @JvmStatic
     @TypeConverter
-    fun specificationToObject(text: String?): List<Specification>? {
+    fun specificationToObject(text: String?): List<SpecificationsModels>? {
         if (text == null) return mutableListOf()
-        val typeToken = object : TypeToken<List<Specification>>() {}.type
+        val typeToken = object : TypeToken<List<SpecificationsModels>>() {}.type
         return Gson().fromJson(text, typeToken)
     }
 

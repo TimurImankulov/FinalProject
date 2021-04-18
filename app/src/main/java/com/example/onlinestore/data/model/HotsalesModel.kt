@@ -16,8 +16,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @Parcelize
-data class Items (
+data class HotsalesModel (
 
-	@SerializedName("hotsales") val hotsales : Hotsales? = null,
-	@SerializedName("bestsales") val bestsales : Bestsales? = null
+	@SerializedName("title") val title : String? = null,
+	@SerializedName("product_list") val product_list : List<ProductListModel>? = null
 ):Parcelable

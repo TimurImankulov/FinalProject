@@ -21,7 +21,7 @@ data class ProductCategoryModel (
 	@SerializedName("category_image") val category_image : String? = null,
 	@SerializedName("bestsales_title") val bestsales_title : String? = null,
 	@SerializedName("bestsales_description") val bestsales_description : String? = null,
-	@SerializedName("bestsales_image") val bestsales_image : Int? = null,
+	@SerializedName("bestsales_image") val bestsales_image : String? = null,
 	@SerializedName("category_title") val category_title : String? = null,
-	@SerializedName("items") val items : Items? = null
+	@SerializedName("items") val items : ItemsModel? = null
 ):Parcelable

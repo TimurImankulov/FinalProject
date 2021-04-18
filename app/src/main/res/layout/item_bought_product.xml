@@ -5,9 +5,9 @@
     android:id="@+id/hotsales_ProductCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp16"
     android:clickable="true"
     android:focusable="true"
-    android:layout_margin="@dimen/dp16"
     app:cardCornerRadius="@dimen/dp10"
     app:cardElevation="@dimen/dp10">
 
@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/iv_Product"
-            android:layout_width="144dp"
-            android:layout_height="180dp"
+            android:layout_width="@dimen/dp144"
+            android:layout_height="@dimen/dp180"
             android:layout_margin="@dimen/dp8"
             android:scaleType="centerCrop"
             android:src="@drawable/samsung"
@@ -45,10 +45,10 @@
             android:layout_marginStart="@dimen/dp24"
             android:layout_marginTop="@dimen/dp4"
             android:fontFamily="@font/mark_pro_regular"
+            android:paddingBottom="@dimen/dp8"
             android:text="Samsung Galaxy s20 Ultra"
             android:textColor="@color/darkBlue"
             android:textSize="@dimen/sp10"
-            android:paddingBottom="@dimen/dp8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_Price" />
 

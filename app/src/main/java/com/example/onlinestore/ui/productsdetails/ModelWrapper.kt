@@ -24,7 +24,7 @@ object ModelWrapper {
 
     fun detailsToRelatedProduct(details: RelatedProductModel?, count: Int = 0): CartProductListModel {
         return CartProductListModel(
-         //   id = details?.id,
+            id = details?.id,
             title = details?.title,
             full_title = details?.full_title,
             images = details?.images,

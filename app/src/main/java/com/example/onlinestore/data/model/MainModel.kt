@@ -18,5 +18,5 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 @Parcelize
 data class MainModel (
 
-	@SerializedName("category") val category : Category? = null
+	@SerializedName("category") val category : CategoryModel? = null
 ):Parcelable

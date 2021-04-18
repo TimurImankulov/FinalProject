@@ -16,8 +16,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 @Parcelize
-data class Specification (
+data class CategoryModel (
 
-	@SerializedName("header") val header : String? = null,
-	@SerializedName("list_specification") val list_specification : List<ListSpecificationsModel>? = null
+	@SerializedName("product_category") val product_category : List<ProductCategoryModel>? = null,
+	@SerializedName("catalog") val catalog : List<CatalogModel>? = null
 ):Parcelable
